@@ -1,0 +1,13 @@
+@mixin font($font-size, $line-height, $font-family: $font-sans-serif, $color: $brown) {
+  font-size: $font-size;
+  font-family: $font-family;
+  font-weight: normal;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

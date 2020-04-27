@@ -1,0 +1,70 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+
+  @include font(14px, 18px, $font-sans-serif, $brown);
+}
+
+.visually-hidden:not(:focus):not(:active),
+label.visually-hidden,
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg path {
+  fill: inherit;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+/**
+ * Tablet
+ */
+@media (min-width: $tablet) {
+  .container {
+    padding: 0 30px;
+    max-width: 768px;
+    margin: auto;
+  }
+}
+
+/**
+ * Desktop
+ */
+@media (min-width: $desktop) {
+  .container {
+    max-width: 1300px;
+    width: 100%;
+    padding: 0 40px;
+  }
+}
